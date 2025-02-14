@@ -282,3 +282,57 @@ video {
     }
 }
 
+/* more effect for menu buttons */
+/* Tabs - Menu */
+.tab-container {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    background-color: #222;
+    padding: 10px;
+    border-radius: 8px;
+    box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.3);
+}
+
+.tab-button {
+    flex: 1;
+    min-width: 100px;
+    background: linear-gradient(135deg, #ff7eb3, #ff758c);
+    border: none;
+    color: white;
+    padding: 12px 20px;
+    cursor: pointer;
+    font-size: 16px;
+    text-align: center;
+    font-weight: bold;
+    border-radius: 6px;
+    margin: 5px;
+    transition: all 0.3s ease-in-out;
+}
+
+.tab-button:hover {
+    background: linear-gradient(135deg, #ff4e91, #ff5f8d);
+    transform: scale(1.05);
+    box-shadow: 0px 3px 8px rgba(255, 94, 146, 0.5);
+}
+
+.tab-button.active {
+    background: linear-gradient(135deg, #ff2e74, #ff3f8d);
+    transform: scale(1.1);
+    box-shadow: 0px 4px 12px rgba(255, 47, 116, 0.6);
+}
+
+/* Responsive */
+@media (max-width: 768px) {
+    .tab-container {
+        flex-direction: column;
+        align-items: center;
+    }
+
+    .tab-button {
+        width: 80%;
+        font-size: 14px;
+        padding: 10px;
+    }
+}
+
