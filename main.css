@@ -162,27 +162,34 @@ body {
     padding: 20px;
 }
 
+.header h1, .header h2 {
+    font-size: 1.5rem;
+}
+
 .header-image {
     width: 100%;
-    max-height: 300px;
+    max-height: 250px;
     object-fit: cover;
 }
 
 /* Tabs */
 .tab-container {
     display: flex;
-    justify-content: center;
     flex-wrap: wrap;
+    justify-content: center;
     background-color: #333;
 }
 
 .tab-button {
+    flex: 1;
+    min-width: 100px;
     background: none;
     border: none;
     color: white;
-    padding: 15px;
+    padding: 12px;
     cursor: pointer;
-    font-size: 18px;
+    font-size: 16px;
+    text-align: center;
 }
 
 .tab-button:hover, .tab-button.active {
@@ -192,7 +199,7 @@ body {
 /* Nội dung Tab */
 .tab-content {
     display: none;
-    padding: 20px;
+    padding: 15px;
 }
 
 .tab-content.active {
@@ -210,7 +217,7 @@ body {
 .image-container figure {
     text-align: center;
     width: 100%;
-    max-width: 300px;
+    max-width: 250px;
 }
 
 .image-style {
@@ -219,16 +226,26 @@ body {
     border-radius: 8px;
 }
 
-/* Định dạng video */
+/* Video */
 video {
-    max-width: 100%;
-    height: auto;
+    width: 100%;
+    max-height: 250px;
+    border-radius: 8px;
 }
 
 /* Responsive */
 @media (max-width: 768px) {
+    /* Giảm kích thước chữ */
+    .header h1, .header h2 {
+        font-size: 1.2rem;
+    }
+
+    .tab-container {
+        flex-direction: column;
+    }
+
     .tab-button {
-        font-size: 16px;
+        font-size: 14px;
         padding: 10px;
     }
 
@@ -236,4 +253,32 @@ video {
         flex-direction: column;
         align-items: center;
     }
+
+    .image-container figure {
+        max-width: 90%;
+    }
+
+    video {
+        max-height: 200px;
+    }
 }
+
+@media (max-width: 480px) {
+    .header {
+        padding: 15px;
+    }
+
+    .header h1 {
+        font-size: 1rem;
+    }
+
+    .tab-button {
+        font-size: 12px;
+        padding: 8px;
+    }
+
+    .image-container figure {
+        max-width: 100%;
+    }
+}
+
