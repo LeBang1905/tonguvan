@@ -13,21 +13,29 @@ body {
 
 /* Header */
 .header {
-    background-color: #f0f0f0;
-    color: #000;
-    text-align: left;
-    padding: 10px;
+    background: linear-gradient(135deg, #ffdee9, #b5fffc); /* Màu sáng nhẹ nhàng */
+    color: #333; /* Màu chữ đậm, dễ đọc */
+    text-align: center;
+    padding: 20px;
+    border-radius: 0 0 15px 15px; /* Bo góc dưới */
+    box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.1);
 }
 
 .header h1, .header h2 {
-    font-size: 1.5rem;
+    font-size: 2rem;
+    font-weight: bold;
+    text-shadow: 2px 2px 5px rgba(0, 0, 0, 0.1);
+    position: relative;
+    z-index: 1;
 }
 
 .header-image {
     width: 100%;
-    max-height: 600px;
-    object-fit: cover;
-    border-radius: 5px;
+    height: auto; /* Đảm bảo ảnh giữ đúng tỷ lệ */
+    max-height: 300px; /* Giới hạn chiều cao */
+    object-fit: contain; /* Hiển thị toàn bộ ảnh mà không bị cắt */
+    display: block;
+    margin: 0 auto; /* Căn giữa ảnh */
 }
 
 /* Tabs - Menu */
@@ -35,18 +43,18 @@ body {
     display: flex;
     flex-wrap: wrap;
     justify-content: center;
-    background-color: #222;
+    background-color: #f8f9fa;
     padding: 10px;
     border-radius: 8px;
-    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.3);
+    box-shadow: 0 2px 6px rgba(0, 0, 0, 0.1);
 }
 
 .tab-button {
     flex: 1;
     min-width: 100px;
-    background: linear-gradient(135deg, #ff7eb3, #ff758c);
+    background: linear-gradient(135deg, #d4eefd, #b3e0ff);
     border: none;
-    color: white;
+    color: #333;
     padding: 12px 20px;
     cursor: pointer;
     font-size: 16px;
@@ -58,15 +66,15 @@ body {
 }
 
 .tab-button:hover {
-    background: linear-gradient(135deg, #ff4e91, #ff5f8d);
+    background: linear-gradient(135deg, #b3e0ff, #99d4ff);
     transform: scale(1.05);
-    box-shadow: 0 3px 8px rgba(255, 94, 146, 0.5);
+    box-shadow: 0px 2px 6px rgba(0, 123, 255, 0.3);
 }
 
 .tab-button.active {
-    background: linear-gradient(135deg, #ff2e74, #ff3f8d);
+    background: linear-gradient(135deg, #99d4ff, #80c8ff);
     transform: scale(1.1);
-    box-shadow: 0 4px 12px rgba(255, 47, 116, 0.6);
+    box-shadow: 0px 2px 8px rgba(0, 123, 255, 0.4);
 }
 
 /* Nội dung Tab */
@@ -152,7 +160,11 @@ video {
 
 /* Responsive */
 @media (max-width: 768px) {
-    .header h1, .header h2 {
+    .header h1 {
+        font-size: 1.5rem;
+    }
+
+    .header h2 {
         font-size: 1.2rem;
     }
 
